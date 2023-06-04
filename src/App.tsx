@@ -1,12 +1,16 @@
 import React from 'react';
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+import {MainPage} from "./pages/MainPage";
 
-function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="*" element={<h2>Page is not found</h2>} />
+            </Routes>
+        </>
+    )
 }
 
 export default App;
