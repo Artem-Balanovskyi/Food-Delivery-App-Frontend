@@ -1,11 +1,20 @@
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import {IMenuItem} from "../../../models/menuItem.interface";
+import {ICartState} from "../../../models/state.models/cartState.interface";
 
 interface MyMenuItemProps {
+    cartPageState: ICartState,
     menuItem: IMenuItem,
+    addItem: Function
 }
-const MenuItem = ({menuItem}: MyMenuItemProps) => {
+const MenuItem = ({menuItem, addItem, cartPageState}: MyMenuItemProps) => {
     const {itemName, price, image} = menuItem;
+
+    const {cartItems} = cartPageState
+
+    const indexInCart = cartItems.findIndex(
+        (item: IMenuItem) => item._id === menuItem._id
+    );
 
     return (
         <Grid item xs={12} md={4}>
@@ -26,6 +35,7 @@ const MenuItem = ({menuItem}: MyMenuItemProps) => {
                 <CardActions>
                     <Button
                         variant="text"
+                        onClick={() => addItem(menuItem, indexInCart)}
                     >
                         Buy
                     </Button>

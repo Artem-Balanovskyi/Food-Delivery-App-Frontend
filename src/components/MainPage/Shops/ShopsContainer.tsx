@@ -3,14 +3,17 @@ import {connect} from "react-redux";
 import {Shops} from "./Shops";
 import {IShop} from "../../../models/shop.interface";
 import {
+    setActiveMenuAC,
     setIsActiveTrueAC,
-    setIsActiveFalseAC
+    setIsActiveFalseAC,
+    setActiveShopAC
 } from "../../../store/reducers/shopsReducer";
 
 let mapStateToProps = (state: IState) => {
 
     return {
         shopsPageState: state.shopsPageState,
+        cartPageState: state.cartPageState
     }
 }
 
@@ -21,6 +24,8 @@ let mapDispatchToProps = (dispatch: Function) => {
 
             dispatch(setIsActiveFalseAC())
             dispatch(setIsActiveTrueAC(shop._id))
+            dispatch(setActiveShopAC(shop._id))
+            dispatch(setActiveMenuAC(shop.menu))
 
         }
     }

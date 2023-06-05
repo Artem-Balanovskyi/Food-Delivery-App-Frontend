@@ -2,12 +2,12 @@ import React from "react"
 import {Paper, Stack, Typography} from '@mui/material'
 import {IShop} from "../../../models/shop.interface";
 
-type MyShopProps = {
+type Props = {
     shop: IShop
     onClickShop: (shop: IShop) => void
 }
 
-export const Shop = ({shop, onClickShop}: MyShopProps) => {
+export const Shop = ({shop, onClickShop}: Props) => {
     const active = (!shop.isActive) ? 0.5 : 1
 
     return <Paper

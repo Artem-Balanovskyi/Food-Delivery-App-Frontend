@@ -1,9 +1,15 @@
 import { AppBar, Badge, IconButton, Toolbar, Typography } from "@mui/material"
 import { ShoppingBasket } from "@mui/icons-material"
 import React from "react";
+import {ICartState} from "../../../models/state.models/cartState.interface";
 
+interface MyHeaderProps {
+    cartPageState: ICartState,
+    openCart: Function
+}
+function MainPageHeader({cartPageState, openCart}: MyHeaderProps) {
 
-function MainPageHeader() {
+    const {cartItemsTotalQuantity} = cartPageState
 
     return (
         <AppBar position="static">
@@ -17,9 +23,11 @@ function MainPageHeader() {
                 </Typography>
                 <IconButton
                     color="inherit"
+                    onClick={() => openCart()}
                 >
                     <Badge
                         color="secondary"
+                        badgeContent={cartItemsTotalQuantity}
                     >
                         <ShoppingBasket />
                     </Badge>
