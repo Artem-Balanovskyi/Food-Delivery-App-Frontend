@@ -12,10 +12,12 @@ import {configureStore, combineReducers} from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage' //
 import {shopsReducer} from "./reducers/shopsReducer";
 import {cartReducer} from "./reducers/cartReducer";
+import {ordersReducer} from "./reducers/orderReducer";
 
 const rootReducer = combineReducers({
     shopsPageState: shopsReducer,
     cartPageState: cartReducer,
+    ordersPageState: ordersReducer
 })
 
 const persistConfig = {
@@ -41,3 +43,5 @@ export const persistor = persistStore(store)
 // @ts-ignore
 window.store = store
 export default store
+
+export type RootState = ReturnType<typeof store.getState>

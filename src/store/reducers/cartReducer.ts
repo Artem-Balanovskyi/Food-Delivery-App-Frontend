@@ -12,10 +12,13 @@ const CLOSE_CART = 'CART:CLOSE_CART'
 const RESET_CART = 'CART:RESET_CART'
 const OPEN_SNACK = 'CART:OPEN_SNACK'
 const CLOSE_SNACK = 'CART:CLOSE_SNACK'
+const CHANGE_SNACK_MESSAGE = 'CART:CHANGE_SNACK_MESSAGE'
+
 
 const initialState: ICartState = {
     isCartOpened: false,
     isSnackOpened: false,
+    snackMessage: 'Item is added to the cart!',
     cartItemsTotalQuantity: 0,
     cartItemsTotalPrice: 0,
     isOrderButtonDisabled: true,
@@ -95,6 +98,11 @@ export const cartReducer = (state: ICartState = initialState, action: IDispatchA
                 ...state,
                 isSnackOpened: false
             }
+        case CHANGE_SNACK_MESSAGE:
+            return {
+                ...state,
+                snackMessage: action.snackMessage
+            }
         default:
             return state
     }
@@ -111,4 +119,4 @@ export const closeCartAC = () => ({type: CLOSE_CART})
 export const resetCartAC = () => ({type: RESET_CART})
 export const openSnackAC = () => ({type: OPEN_SNACK})
 export const closeSnackAC = () => ({type: CLOSE_SNACK})
-
+export const changeSnackMessageAC = (snackMessage: string) => ({type: CHANGE_SNACK_MESSAGE, snackMessage})

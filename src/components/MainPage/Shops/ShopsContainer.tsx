@@ -6,8 +6,9 @@ import {
     setActiveMenuAC,
     setIsActiveTrueAC,
     setIsActiveFalseAC,
-    setActiveShopAC
+    setActiveShopAC, setShopsAC
 } from "../../../store/reducers/shopsReducer";
+import axios from "axios";
 
 let mapStateToProps = (state: IState) => {
 
@@ -27,6 +28,21 @@ let mapDispatchToProps = (dispatch: Function) => {
             dispatch(setActiveShopAC(shop._id))
             dispatch(setActiveMenuAC(shop.menu))
 
+        },
+        fetchShops: async (url: string) => {
+
+            let shops: IShop[] = await axios.get(url)
+                .then((response) => {
+                    return response.data.shops
+                }).catch(() => {
+                })
+
+            if (shops.length && shops.length > 0) {
+                dispatch(setShopsAC(shops))
+                dispatch(setIsActiveTrueAC(shops[0]._id))
+                dispatch(setActiveShopAC(shops[0]._id))
+                dispatch(setActiveMenuAC(shops[0].menu))
+            }
         }
     }
 }

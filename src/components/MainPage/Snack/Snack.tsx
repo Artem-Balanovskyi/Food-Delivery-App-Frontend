@@ -9,7 +9,7 @@ interface MySnackProps {
 
 function Snack({cartPageState, closeSnack}: MySnackProps) {
 
-    const {isSnackOpened} = cartPageState
+    const {isSnackOpened, snackMessage} = cartPageState
 
     return (
         <Snackbar
@@ -19,7 +19,7 @@ function Snack({cartPageState, closeSnack}: MySnackProps) {
         >
             <Alert
                 severity="success"
-            >Item is added to the cart!</Alert>
+            >{snackMessage}</Alert>
         </Snackbar>
     )
 }

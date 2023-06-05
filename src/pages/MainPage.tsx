@@ -14,12 +14,12 @@ export function MainPage() {
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} md={4}>
                     <Container sx={{mt: '1rem'}}>
-                        <Typography variant="h5" textAlign='center' marginBottom={2}>
-                            Shops:
-                        </Typography>
-                        <Stack spacing={2}>
-                            <ShopsContainer/>
-                        </Stack>
+                            <Typography variant="h5" textAlign='center' marginBottom={2}>
+                                Shops:
+                            </Typography>
+                            <Stack spacing={2}>
+                                <ShopsContainer/>
+                            </Stack>
                     </Container>
                 </Grid>
                 <Grid item xs={12} sm={6} md={8}>
