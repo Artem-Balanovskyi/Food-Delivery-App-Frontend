@@ -64,8 +64,10 @@ let mapDispatchToProps = (dispatch: Function) => {
                 customers.map(customer => {
                     if (customer.email === email || customer.phone === phone) {
                         updateExistingCustomer(dispatch, customer, newOrder)
+                        return customer
                     } else {
                         submitNewCustomer(dispatch, newCustomer)
+                        return customer
                     }
                 })
             } else {
