@@ -2,12 +2,12 @@
   "name": "food-delivery-app-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Artem-Balanovskyi.github.io/Food-Delivery-App-Frontend",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.3",
+    "@react-google-maps/api": "^2.18.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -19,6 +19,7 @@
     "@types/redux-persist": "^4.3.1",
     "axios": "^1.4.0",
     "react": "^18.2.0",
+    "react-cool-onclickoutside": "^1.7.0",
     "react-dom": "^18.2.0",
     "react-number-format": "^5.2.2",
     "react-redux": "^8.0.7",
@@ -27,6 +28,7 @@
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
     "typescript": "^4.9.5",
+    "use-places-autocomplete": "^4.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
