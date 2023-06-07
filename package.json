@@ -2,7 +2,7 @@
   "name": "food-delivery-app-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Artem-Balanovskyi.github.io/food-delivery-app-frontend",
+  "homepage": "https://Artem-Balanovskyi.github.io/Food-Delivery-App-Frontend",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
