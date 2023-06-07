@@ -3,7 +3,7 @@ import {GoogleMap, Marker, useLoadScript} from '@react-google-maps/api';
 import {defaultTheme} from "./Theme";
 import {Autocomplete} from "../Autocomlpete/Autocomplete";
 import {Button, Container, Stack} from "@mui/material";
-import {getBrowserLocation} from "../getBrowserLocation";
+import {getBrowserLocation} from "../utils/getBrowserLocation";
 import {getLatLng} from "use-places-autocomplete";
 
 const containerStyle = {

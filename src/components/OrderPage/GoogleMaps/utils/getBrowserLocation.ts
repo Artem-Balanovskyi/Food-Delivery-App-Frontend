@@ -1,4 +1,4 @@
-import {ICoordinates} from "./Map/Map";
+import {ICoordinates} from "../Map/Map";
 
 const defaultCenter: ICoordinates = {
     lat: 46.482,
