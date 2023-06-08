@@ -4,7 +4,6 @@ import {defaultTheme} from "./Theme";
 import {Autocomplete} from "../Autocomlpete/Autocomplete";
 import {Button, Container, Stack} from "@mui/material";
 import {getBrowserLocation} from "../utils/getBrowserLocation";
-import {getLatLng} from "use-places-autocomplete";
 
 const containerStyle = {
     width: '100%',
@@ -108,7 +107,7 @@ export const Map = () => {
             default:
                 setMode(MODES.MOVE)
         }
-    }, [mode])
+    }, [])
 
     return isLoaded ? (
         <Container sx={{mt: '1rem'}}>

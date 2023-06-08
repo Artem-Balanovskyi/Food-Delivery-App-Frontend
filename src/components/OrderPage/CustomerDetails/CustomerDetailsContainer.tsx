@@ -76,14 +76,14 @@ let mapDispatchToProps = (dispatch: Function) => {
 
             function submitNewOrder (newOrder: IOrder) {
                 axios
-                    .post(`${process.env.REACT_APP_SERVER_URL}orders`, {...newOrder})
+                    .post(`${process.env.REACT_APP_SERVER_URL}/orders`, {...newOrder})
                     .then((response) => response)
                     .catch((err) => console.log(err));
             }
 
             function submitNewCustomer (dispatch: Function, newCustomer: ICustomer) {
                 axios
-                    .post(`${process.env.REACT_APP_SERVER_URL}customers`, {...newCustomer})
+                    .post(`${process.env.REACT_APP_SERVER_URL}/customers`, {...newCustomer})
                     .then((response) => response)
                     .catch((err) => console.log(err));
 
@@ -92,7 +92,7 @@ let mapDispatchToProps = (dispatch: Function) => {
 
             function updateExistingCustomer (dispatch: Function, customer: ICustomer, newOrder: IOrder) {
                 axios
-                    .put(`${process.env.REACT_APP_SERVER_URL}customers/${customer._id}`, {orders: [...customer.orders, newOrder]})
+                    .put(`${process.env.REACT_APP_SERVER_URL}/customers/${customer._id}`, {orders: [...customer.orders, newOrder]})
                     .then((response) => response)
                     .catch((err) => console.log(err));
 

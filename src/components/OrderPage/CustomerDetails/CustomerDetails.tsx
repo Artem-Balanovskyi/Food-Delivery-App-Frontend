@@ -35,8 +35,8 @@ export default function CustomerDetails(props: MyCustomerDetailsProps) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetchCustomers(`${process.env.REACT_APP_SERVER_URL}customers`);
-        fetchOrders(`${process.env.REACT_APP_SERVER_URL}orders`);
+        fetchCustomers(`${process.env.REACT_APP_SERVER_URL}/customers`);
+        fetchOrders(`${process.env.REACT_APP_SERVER_URL}/orders`);
     }, [fetchCustomers, fetchOrders]);
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {

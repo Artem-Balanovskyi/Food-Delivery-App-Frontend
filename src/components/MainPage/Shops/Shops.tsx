@@ -17,7 +17,7 @@ export const Shops = ({shopsPageState, cartPageState, onClickShop, fetchShops}: 
     const {cartItems} = cartPageState
 
     useEffect(() => {
-        fetchShops(`${process.env.REACT_APP_SERVER_URL}shops`);
+        fetchShops(`${process.env.REACT_APP_SERVER_URL}/shops`);
     }, [fetchShops]);
 
 
