@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react'
 import {GoogleMap, Marker, useLoadScript} from '@react-google-maps/api';
 import {defaultTheme} from "./Theme";
-import {Autocomplete} from "../Autocomlpete/Autocomplete";
+import {Autocomplete} from "./Autocomplete";
 import {Button, Container, Stack} from "@mui/material";
-import {getBrowserLocation} from "../utils/getBrowserLocation";
+import {getBrowserLocation} from "./utils/getBrowserLocation";
 
 const containerStyle = {
     width: '100%',

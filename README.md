@@ -10,7 +10,7 @@ It has been already deployd with VERCEL:
 https://food-delivery-app-frontend-pi.vercel.app/
 ```bash
 Backend part is deployd on the link below: 
-https://food-delivery-app-backend-artem-balanovskyi.vercel.app/
+ https://food-delivery-app-backend-five.vercel.app 
 ```
 
 #### If you want to start the app locally then you need to rename

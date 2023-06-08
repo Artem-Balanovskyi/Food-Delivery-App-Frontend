@@ -4,7 +4,7 @@ import OrderDetailsContainer from "../components/OrderPage/OrderDetails/OrderDet
 import CustomerDetailsContainer from "../components/OrderPage/CustomerDetails/CustomerDetailsContainer";
 import OrderPageHeader from "../components/OrderPage/OrderPageHeader/OrderPageHeader";
 
-import {Map} from '../components/OrderPage/GoogleMaps/Map/Map'
+import {Map} from '../components/OrderPage/GoogleMaps/Map'
 
 export function OrderPage() {
 
