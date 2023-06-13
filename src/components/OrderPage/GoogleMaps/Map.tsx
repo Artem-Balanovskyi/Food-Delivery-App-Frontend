@@ -51,7 +51,7 @@ export const Map = () => {
 
     const {isLoaded} = useLoadScript({
         id: 'google-map-script',
-        googleMapsApiKey: process.env.REACT_APP_API_KEY || '',
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY || '',
         libraries
     })
 
