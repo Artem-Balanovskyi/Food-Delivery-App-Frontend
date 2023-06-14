@@ -7,8 +7,8 @@
 ```bash
 It has been already deployd with VERCEL:
 ```
-https://food-delivery-app-frontend-pi.vercel.app/
+https://food-delivery-app-frontend-pi.vercel.app
 ```bash
 Backend part is deployd on the link below:  
 ```
-https://food-delivery-app-backend-five.vercel.app
+https://food-delivery-app-backend.vercel.app
